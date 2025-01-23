@@ -1,0 +1,434 @@
+/* General Reset and Body Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Perpetua', serif;
+  background-color: #1a1a1a;
+  color: #f8f8f8;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  width: 120px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Keeps the list items horizontal */
+  gap: 20px; /* Adds space between items */
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Ensures each list item stays inline */
+}
+
+/* General link styles */
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #f8f8f8;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for both effects */
+  padding: 10px 15px;
+  display: inline-block;  /* Ensures transform works correctly on inline elements */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  color: #ffcc00; /* Text color on hover */
+  transform: scale(1.5); /* Slightly smaller scale for smoother effect */
+  transform-origin: center; /* Ensures the scaling happens from the center of the text */
+}
+
+/* Make <h1> unaffected */
+h1 {
+  font-size: 2.5rem;
+  color: #f8f8f8;
+  margin-bottom: 20px; /* Ensure space between h1 and nav */
+}
+
+/* CSS */
+/* Banner Style */
+.banner {
+  position: relative;
+  height: 400px; /* Fixed height for the banner */
+  width: 100%; /* Full-width banner */
+  background-color: #333; /* Fallback color in case the image doesn't load */
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.banner img {
+  width: 100%; /* Scale to fit the full width */
+  height: 100%; /* Scale to fit the height */
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+  opacity: 0.7; /* Add transparency */
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+/* Character Info Section */
+.character-info {
+  padding: 40px;
+}
+
+.character-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.character-image img {
+  float: left;
+  width: 250px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.character-bio {
+  max-width: 675px;
+}
+
+.character-bio .cardboard {
+  border-radius: 20px;
+  background: #e0e0e0; /* Light gray background */
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow:  -5px 5px 0px #8d8d8d, 5px -5px 0px #ffffff;
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.character-bio .cardboard:hover {
+  background: #d0d0d0;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3), 0px -10px 30px rgba(255, 255, 255, 0.3); /* Softer shadow */
+  transform: scale(1.1); /* Scale up */
+}
+
+
+.character-bio h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.character-bio p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #000000; /* Matches the cardboard theme */
+}
+
+/* Power and Abilities Section */
+.power-abilities {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+  color: white;
+}
+
+.power-abilities h1 {
+  font-size: 2.5rem;
+  text-align: right;
+  margin-bottom: 30px;
+}
+/* Container for the abilities */
+.accordion {
+  display: flex; /* Arrange the cards horizontally */
+  flex-wrap: wrap; /* Allow cards to wrap to the next row if necessary */
+  justify-content: space-between; /* Space between the cards */
+  gap: 20px; /* Add consistent spacing between cards */
+  padding: 20px; /* Optional: add padding around the entire container */
+}
+/* Cardboard Style for Abilities */
+.accordion .ability {
+  background: #757575;  /* Light cardboard background */
+  padding: 60px;
+  margin-bottom: 15px;
+  border-radius: 8px;  /* Slightly rounded corners */
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1), -4px -4px 6px rgba(255, 255, 255, 0.3);  /* Shadow to mimic cardboard */
+  width: 300px;  /* Make the cards square (width = height) */
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.accordion .ability:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.2), -8px -8px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Ability Title */
+.accordion .ability-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;  /* Dark text for the title */
+}
+
+/* Ability Description (Hidden until hover) */
+.accordion .ability-details {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  color: #444;
+  background: rgba(0, 0, 0, 0.7);  /* Semi-transparent background for the detailed description */
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  padding-top: 80px; /* To avoid title overlapping */
+}
+
+/* On Hover: Show and Expand the Description */
+.accordion .ability:hover .ability-details {
+  opacity: 1;
+  visibility: visible;
+  padding-top: 20px;
+  transform: scale(1); /* Keep the same size but reveal details */
+}
+
+.accordion .ability-details p {
+    color: white;
+}
+
+/* Ability List Items */
+.accordion .ability ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.accordion .ability ul li {
+  background: #d1d1d1;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Styling the Image */
+.accordion .ability img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.accordion .ability-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer Base Styling */
+footer ss{
+    background-color: #222; /* Footer background */
+    color: #f8f8f8; /* Footer text color */
+    padding: 20px;
+    text-align: center; /* Centers all footer content */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack carousel and links vertically */
+    align-items: center; /* Center align the content */
+    gap: 20px; /* Add spacing between carousel and links */
+}
+
+.brandsCarousel {
+    width: 300px; /* Centered carousel with limited width */
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    background: transparent; /* Transparent background */
+}
+
+.carouselTrack {
+    display: flex; /* Horizontal layout for the logos */
+    width: calc(100px * 6); /* Adjust width based on logo count */
+    animation: infiniteLoop 10s linear infinite;
+    will-change: transform;
+}
+
+.brandLogo img {
+    width: 80px; /* Adjust logo size */
+    height: 50px;
+    object-fit: contain;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.social-links ul li {
+   margin-bottom: 10px;
+}
+
+.social-links ul li a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links ul li a:hover {
+    color: #003bff; /* Highlight link on hover */
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .character-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-image img {
+    float: none;
+    margin: 0 auto 20px;
+    width: 200px;
+  }
+
+  .character-bio p {
+    text-align: center;
+  }
+}
+
+/* Add this to your CSS file (styles.css) */
+@font-face {
+  font-family: 'Perpetua'; /* Custom name for the font */
+  src: url('perpetua.ttf') format('truetype'); /* Adjust the file path and format */
+}
+
+:root {
+    --off-white: #fafaf0;
+}
+
+@keyframes infiniteLoop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-100px * 3), 0, 0); /* Shift width of 3 logos */
+    }
+}
+
+.brandsCarousel {
+    max-width: 100px; /* 100px width for 3 logos */
+    max-height: 50px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.brandsCarousel::before,
+.brandsCarousel::after {
+    content: "";
+    width: 50px; /* Adjusted for a smaller carousel */
+    height: 100px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(250, 250, 240, 1) 0%, rgba(250, 250, 240, 0) 100%);
+    /* If you don't want the fade-in effect, make it transparent too */
+    background: transparent;
+}
+
+.brandsCarousel::before {
+    left: 0;
+}
+
+.brandsCarousel::after {
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 0; /* No spacing between logos */
+    width: calc(100px * 6); /* 3 logos x 2 for seamless looping */
+    animation: infiniteLoop 6s linear infinite; /* Adjusted duration for smooth animation */
+}
+
+.brandLogo {
+    flex: 0 0 auto; /* Prevent logos from shrinking */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.brandLogo img {
+    width: auto; /* Preserve aspect ratio */
+    height: 50%; /* Scale logo height to 50% of the container */
+}
+
+/* Optional: Hover to pause animation */
+.brandsCarousel:hover .carouselTrack {
+    animation-play-state: paused;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brandsCarousel {
+        max-width: 100%; /* Make the carousel full-width on smaller screens */
+    }
+
+    .carouselTrack {
+        width: calc(100px * 6); /* Adjust track width */
+    }
+
+    .brandLogo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .brandLogo img {
+        height: 40%; /* Adjust logo size */
+    }
+}
