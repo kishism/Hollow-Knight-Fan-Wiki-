@@ -17,27 +17,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
-  padding: 20px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* Transparent gradient */
+  padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);  /* Blurring background */
 }
 
+/* Logo */
 header .logo img {
-  width: 120px;
-  height: auto;
+  height: 70px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
+header .logo img:hover {
+  transform: scale(1.05);  /* Slight zoom */
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
-  display: flex; /* Keeps the list items horizontal */
-  gap: 20px; /* Adds space between items */
+  display: flex;
+  gap: 25px;
   padding: 0;
-}
-
-nav ul li {
-  display: inline-block; /* Ensures each list item stays inline */
 }
 
 /* General link styles */
@@ -57,14 +61,19 @@ nav ul li a:hover {
   transform-origin: center; /* Ensures the scaling happens from the center of the text */
 }
 
-/* Make <h1> unaffected */
-h1 {
-  font-size: 2.5rem;
-  color: #f8f8f8;
-  margin-bottom: 20px; /* Ensure space between h1 and nav */
+/* Active Link Styling */
+nav ul li a.active {
+  color: #ffcc00;
+  font-weight: bold;
 }
 
-/* CSS */
+/* Make <h1> unaffected */
+h1 {
+  font-size: 2.8rem;
+  color: #f8f8f8;
+  margin-bottom: 20px;/* Ensure space between h1 and nav */
+}
+
 /* Banner Style */
 .banner {
   position: relative;
@@ -94,12 +103,17 @@ h1 {
 /* Character Info Section */
 .character-info {
   padding: 40px;
+  margin-bottom: -160px;
 }
 
 .character-details {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+
+.character_heading {
+    font-size: 6rem;
 }
 
 .character-image img {
@@ -152,8 +166,9 @@ h1 {
 
 .power-abilities h1 {
   font-size: 2.5rem;
-  text-align: right;
+  text-align: center;
   margin-bottom: 30px;
+  margin-top: 150px;
 }
 /* Container for the abilities */
 .accordion {
@@ -354,8 +369,8 @@ footer p {
 }
 
 .brandsCarousel {
-    max-width: 100px; /* 100px width for 3 logos */
-    max-height: 50px;
+    max-width: 140px; /* 100px width for 3 logos */
+    max-height: 100px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -395,8 +410,8 @@ footer p {
 
 .brandLogo {
     flex: 0 0 auto; /* Prevent logos from shrinking */
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -432,3 +447,218 @@ footer p {
         height: 40%; /* Adjust logo size */
     }
 }
+
+/* Lore Page CSS */
+/* General container styles */
+#lore-heading {
+  font-size: 5.5rem;  
+  text-align: center;
+}
+
+.lore-section {
+  width: 100%;
+  max-width: 800px; /* Ensure parent has enough space */
+  margin: 0 auto; /* Center the section */
+  padding: 20px; /* Optional padding for better appearance */
+}
+
+.general-lore {
+  width: 100%;
+}
+
+.lore-section .general-lore p {
+  color: #fff;
+  font-size: 1.2rem;
+  max-width: 675px; 
+  width: 100%; 
+  display: block; 
+  margin: 0 auto; 
+  line-height: 1.5; 
+  box-sizing: border-box; 
+  margin-bottom: 30px;
+}
+
+#mons_heading { 
+  text-align: center;
+}
+
+.lore-section .general-lore #first {
+  color: #fff;
+  font-size: 1.3rem;
+  max-width: 800px; /* Restrict max width */
+  width: 100%; /* Allow width to adjust */
+  display: block; /* Ensure block behavior */
+  margin: 0 auto; /* Center the paragraph */
+  line-height: 1.5; /* Improve readability */
+  box-sizing: border-box; /* Ensure padding/border included in max-width */
+  margin-bottom: 30px;
+}
+
+/* Ensure the .mons-content takes up full width */
+.mons-content {
+  display: flex; /* Align content side by side */
+  gap: 20px; /* Add space between the text and image */
+  align-items: center; /* Vertically align the items */
+  margin-top: 40px; /* Optional: Add some spacing above */
+  max-width: 1200px; /* Adjust max-width to your desired limit */
+  margin: 0 auto; /* Center the content */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Text Section */
+.mons-content .text {
+  flex: 2; /* Give the text section more space */
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #fff;
+  max-width: 800px; /* Restrict the width of the text */
+}
+
+/* Image Section */
+.mons-content .image {
+  flex: 1; /* Image takes up 1 part of space */
+  max-width: 450px; /* Optional: Restrict max width of image */
+}
+
+.mons-content img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Divider Image Style */
+#divider {
+  width: 40%; /* Stretch divider to full width */
+  height: auto;
+  margin: 0 auto; /* Margin to separate it from other content */
+  display: block;
+}
+
+/* Adjusting the #bee title */
+#mons_heading {
+  font-size: 3rem; /* Slightly smaller than the main title */
+  color: #fff;
+  margin-top: 40px; /* Optional: Margin for spacing */
+  text-align: center; /* Optional: Center title */
+  margin-top: -90px;
+}
+
+/* Optional: Adjusting paragraph spacing */
+#first, #second {
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+  color: #fff; /* Ensure text color is white */
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px; /* Restrict the container's max width */
+  position: relative;
+  margin: auto;
+  border: 3px solid #fff; /* White border for the container */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure no content goes outside the container */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  background-color: #121212; /* Darker black for better contrast */
+  margin-bottom: 100px;
+}
+
+/* Slide styling - Hide slides by default */
+.mySlides {
+  display: none;
+  animation: fadeEffect 1.5s ease-in-out; /* Smooth fade animation for transitions */
+}
+
+/* Animation for fading effect */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Image styling */
+.slide-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Ensures the image scales without distortion */
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly more opaque buttons */
+  border: none;
+  border-radius: 50%; /* Circular buttons for a modern look */
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.prev {
+  left: 20px; /* Add a bit of spacing from the edge */
+}
+
+.next {
+  right: 20px; /* Add a bit of spacing from the edge */
+}
+
+/* Navigation button hover effects */
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Caption text */
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+  border-radius: 5px;
+  text-align: center;
+  max-width: 90%; /* Ensures the caption doesn't overflow the container */
+  line-height: 1.4;
+}
+
+/* Dots/Indicators */
+.dot-container {
+  text-align: center;
+  position: relative;
+  top: -30px; /* Move dots closer to the slideshow */
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot:hover, .dot.active {
+  background-color: #ffcc00; /* Highlight color for active or hovered dots */
+  transform: scale(1.2); /* Slightly enlarge the dot */
+}
+
+
+
+
