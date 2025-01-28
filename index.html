@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hollow Knight Wiki - The Knight</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./assets/hollow_knight_logo.png" alt="Hollow Knight Wiki" id="logo">
+    </div>
+    <h1> Hollow Knight Fan Wiki </h1>
+    <nav>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="lore.html">Lore</a></li>
+        <li><a href="#">Maps</a></li>
+        <li><a href="comm.html">Community</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Inline JavaScript placed here -->
+  <script>
+    let clickCount = 0;
+    const logo = document.getElementById('logo');
+    
+    logo.addEventListener('click', function() {
+      clickCount++;
+
+      if (clickCount === 3) {
+        window.location.href = 'hidden.html'; // Redirect after 3 clicks
+      }
+    });
+  </script>
+
+  <main class="character-page">
+    <div class="banner">
+      <img src="./assets/banner.png" alt="The Knight">
+      <div class="banner-overlay"></div>
+    </div>
+
+    <section class="character-info">
+      <h1> The Knight </h1>
+      <div class="character-details">
+        <div class="character-image">
+          <img src="./assets/hollow_knight_P1.png" alt="The Knight">
+        </div>
+        <div class="character-bio">
+          <div class="cardboard">
+            <h2>Bio</h2>
+            <p>The Knight is the main protagonist of <i>Hollow Knight</i>, a mysterious silent warrior exploring the ruined kingdom of Hallownest. With a simple design, the Knight’s purpose and identity are a central part of the game’s narrative, shrouded in mystery. The Knight’s journey is filled with danger, discovery, and encounters with various characters that play key roles in unraveling the secrets of Hallownest. As the player progresses, they uncover more about the Knight's past and their connection to the kingdom's downfall...</p>
+          </div>
+        </div>
+      </div>
+        
+     </section>
+        
+<section class="power-abilities">
+  <!-- Spells --> 
+  <h1> SPELLS </h1>
+  <p id="pa_center"> Spells are skills the Knight can activate by either holding FOCUS/CAST (Focus) or tapping FOCUS/CAST or QUICK CAST while neutral (Vengeful Spirit/Shade Soul) or while holding UP (Howling Wraiths/Abyss Shriek) or DOWN (Desolate Dive/Descending Dark). </p>
+  <div class="accordion">
+    <!-- First Row of Cards -->
+    <div class="ability">
+      <img src="./assets/Focus_inventory.png" alt="Focus" class="ability-image">
+      <h2 class="ability-title"> Focus </h2>
+      <div class="ability-details">
+        <p>Focus collected SOUL to repair your shell and heal damage.</p>
+        <ul>
+          <li>Strike enemies to gather SOUL.</li>
+          <li>Hold FOCUS/CAST</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Vengeful_Spirit_Icon.png" alt="Vegenful_Spirit" class="ability-image">
+      <h2 class="ability-title"> Vengeful Spirit </h2>
+      <div class="ability-details">
+        <p>Conjure a spirit that will fly forward and burn foes in its path.</p>
+        <ul>
+          <li>The spirit requires SOUL to be conjured. Strike enemies to gather SOUL.</li>
+          <li>FOCUS/CAST or QUICK CAST</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Desolate_Dive_Icon.png" alt="Desolate_Dive" class="ability-image">
+      <h2 class="ability-title"> Desolate Dive </h2>
+      <div class="ability-details">
+        <p>Strike the ground with a concentrated force of SOUL. This force can destroy foes or break through fragile structures.</p>
+        <ul>
+          <li>The force requires SOUL to be conjured. Strike enemies to gather SOUL.</li>
+          <li>DOWN + CAST</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Second Row of Cards (you can repeat or add different abilities here) -->
+    <div class="ability">
+      <img src="./assets/Howling_Wraiths_Icon.png" alt="Howling_Wraiths" class="ability-image">
+      <h2 class="ability-title"> Howling Wraiths </h2>
+      <div class="ability-details">
+        <p>Blast foes with screaming SOUL.</p>
+        <ul>
+          <li>The Wraiths requires sic SOUL to be conjured. Strike enemies to gather SOUL.</li>
+          <li>UP + CAST</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Shade_Soul_Icon.png" alt="Shade_Soul" class="ability-image">
+      <h2 class="ability-title"> Shade Soul </h2>
+      <div class="ability-details">
+        <p>Conjure a shadow that will fly forward and burn foes in its path.</p>
+        <ul>
+          <li>The shadow requires SOUL to be conjured. Strike enemies to gather SOUL.</li>
+          <li>CAST</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Descending_Dark_Icon.png" alt="Descending_Dark" class="ability-image">
+      <h2 class="ability-title"> Descending Dark </h2>
+      <div class="ability-details">
+        <p>Strike the ground with a concentrated force of SOUL and Shadow. This force can destroy foes or break through fragile structures.</p>
+        <ul>
+          <li>The force requires SOUL to be conjured. Strike enemies to gather SOUL.</li>
+          <li>DOWN + CAST</li>
+        </ul>
+      </div>
+    </div>
+      
+    <div class="ability">
+      <img src="./assets/Abyss_Shriek_Icon.png" alt="Abyss_Shriek" class="ability-image">
+      <h2 class="ability-title"> Abyss Shriek </h2>
+      <div class="ability-details">
+        <p>Blast foes with screaming SOUL and Shadow..</p>
+        <ul>
+          <li>TThe Wraiths requires sic SOUL to be conjured. Strike enemies to gather SOUL.</li>
+          <li>UP + CAST</li>
+        </ul>
+      </div>
+    </div>   
+  </div>
+    
+<hr style="border: 1px solid #000; width: 100%; margin-bottom: -120px;">
+  
+  <!-- Abilities -->
+  <h1> ABILITIES </h1>
+  <p id="pa_center"> Abilities are skills the Knight can find throughout the game that make traversing Hallownest easier. </p> 
+  <div class="accordion">
+    <!-- First Row of Cards -->
+    <div class="ability">
+      <img src="./assets/Mothwing_Cloak_Icon.png" alt="Mothwing_Cloak" class="ability-image">
+      <h2 class="ability-title"> Mothwing Cloak </h2>
+      <div class="ability-details">
+        <p>Cloak threaded with mothwing strands. Allows the wearer to dash forwards along the ground or through the air.</p>
+        <ul>
+          <li>Dash forward a short distance. The cooldown between dashes is 0.6 seconds</li>
+          <li>DASH</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Mantis_Claw.png" alt="Mantis_Claw" class="ability-image">
+      <h2 class="ability-title"> Mantis Claw </h2>
+      <div class="ability-details">
+        <p>Claw carved from bone. Allows the wearer to cling to walls and leap off them.</p>
+        <ul>
+          <li>Wall slide and wall jump</li>
+          <li>LEFT/RIGHT against a wall
+              JUMP while sliding</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Crystal_Heart_Icon.png" alt="Crystal_Heart" class="ability-image">
+      <h2 class="ability-title"> Crystal Heart </h2>
+      <div class="ability-details">
+        <p>The energy core of an old mining golem, fashioned around a potent crystal. The crystal's energy can be channeled sic to launch the bearer forward at dangerous speeds.</p>
+        <ul>
+          <li>Fly horizontally</li>
+          <li>Hold and release SUPER DASH</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Second Row of Cards (you can repeat or add different abilities here) -->
+    <div class="ability">
+      <img src="./assets/Isma27s_Tear.png" alt="Isma27s_Tear" class="ability-image">
+      <h2 class="ability-title"> Isma's Tear </h2>
+      <div class="ability-details">
+        <p>Fruit formed from a single hardened tear. Once ingested it provides protection from the searing, acidic pools found in certain parts of Hallownest.</p>
+        <ul>
+          <li>Swim in acid</li>
+          <li>-</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Shade_Cloak_Icon.png" alt="Shade_Cloak" class="ability-image">
+      <h2 class="ability-title"> Shade Cloak </h2>
+      <div class="ability-details">
+        <p>Cloak formed from the substance of the Abyss. Allows the wearer to dash through enemies and their attacks without taking damage.</p>
+        <ul>
+          <li>Dash through damage and Shade Gates</li>
+          <li>DASH</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Dream_Nail.png" alt="Dream_Nail" class="ability-image">
+      <h2 class="ability-title"> Dream Nail </h2>
+      <div class="ability-details">
+        <p>Allows the wielder to cut through the veil between dreams and waking. Can be used to reveal hidden dreams or open gateways.</p>
+        <ul>
+          <li>Collect Essence and enter dreams</li>
+          <li>DREAM NAIL</li>
+        </ul>
+      </div>
+    </div>
+      
+    <div class="ability">
+      <img src="./assets/Awoken_Dream_Nail_Icon.png" alt="Awoken_Dream_Nail" class="ability-image">
+      <h2 class="ability-title"> Awoken Dream Nail </h2>
+      <div class="ability-details">
+        <p>Allows the wielder to cut through the veil between dreams and waking. Can be used to reveal hidden dreams or open gateways.</p>
+        <ul>
+          <li>Collect Essence and enter dreams</li>
+          <li>DREAM NAIL</li>
+        </ul>
+      </div>
+    </div>   
+  </div>
+
+<hr style="border: 1px solid #000; width: 100%; margin-bottom: -120px;">
+  
+  <!-- Nail Arts -->
+  <h1> NAIL ARTS </h1>
+  <p id="pa_center"> Nail Arts are abilities using the Nail, taught to the Knight by the Nailmasters. Executing a Nail Art involves holding down ATTACK to charge, then releasing while doing an optional second input depending on the Nail Art. </p>
+  <div class="accordion">
+    <!-- First Row of Cards -->
+    <div class="ability">
+      <img src="./assets/Cyclone_Slash.png" alt="Cyclone_Slash" class="ability-image">
+      <h2 class="ability-title"> Cyclone Slash </h2>
+      <div class="ability-details">
+        <p>The signature Nail Art of Nailmaster Mato. A spinning attack that rapidly strikes foes on all sides..</p>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Dash_Slash.png" alt="Dash Slash" class="ability-image">
+      <h2 class="ability-title"> Dash Slash </h2>
+      <div class="ability-details">
+        <p>TThe signature Nail Art of Nailmaster Oro. Strike ahead quickly after dashing forward.</p>
+      </div>
+    </div>
+
+    <div class="ability">
+      <img src="./assets/Icon_HK_Great_Slash.png" alt="Great_Slash" class="ability-image">
+      <h2 class="ability-title"> Great Slash </h2>
+      <div class="ability-details">
+        <p>The signature Nail Art of Nailmaster Sheo. Unleashes a huge slash directly in front of you which deals extra damage to foes.</p>
+      </div>
+    </div>  
+  </div>
+</section>
+    
+ <footer>
+    <div class="footer-content">
+        <div class="brandsCarousel">
+            <div class="carouselTrack">
+                <div class="brandLogo"><img src="./assets/sl_1.png" alt=""></div>
+                <div class="brandLogo"><img src="./assets/sl_2.png" alt=""></div>
+                <div class="brandLogo"><img src="./assets/sl_3.png" alt=""></div>
+                <!-- Repeat logos for infinite effect -->
+                <div class="brandLogo"><img src="./assets/sl_1.png" alt=""></div>
+                <div class="brandLogo"><img src="./assets/sl_2.png" alt=""></div>
+                <div class="brandLogo"><img src="./assets/sl_3.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <p>&copy; 2025 Hollow Knight Wiki</p>
+</footer>
+</body>
+</html>
