@@ -12,37 +12,18 @@ body {
   line-height: 1.6;
 }
 
-#gif {
-  display: block;         
-  margin: 0 auto; 
-  margin-top: 30px;
-  width: 400px;
-  height: 350px;
-  box-shadow: 4px 4px 10px 2px rgba(139, 0, 0, 0.7);  /* Dark red */
-}
 
-#below {
-    text-align: center;
-    font-size: 1.4rem;
-}
-
-#divider_main {
-  width: 20%; 
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); 
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* Transparent gradient */
   padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);  /* Blurring background */
 }
 
 /* Logo */
@@ -53,8 +34,9 @@ header .logo img {
 }
 
 header .logo img:hover {
-  transform: scale(1.05);  
+  transform: scale(1.05);  /* Slight zoom */
 }
+
 
 /* Navigation */
 nav ul {
@@ -69,16 +51,16 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.6rem;
   color: #f8f8f8;
-  transition: transform 0.3s ease, color 0.3s ease; 
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for both effects */
   padding: 10px 15px;
-  display: inline-block;  
+  display: inline-block;  /* Ensures transform works correctly on inline elements */
 }
 
 /* Hover effect */
 nav ul li a:hover {
-  color: #ffcc00; 
-  transform: scale(1.5); 
-  transform-origin: center; 
+  color: #ffcc00; /* Text color on hover */
+  transform: scale(1.5); /* Slightly smaller scale for smoother effect */
+  transform-origin: center; /* Ensures the scaling happens from the center of the text */
 }
 
 /* Active Link Styling */
@@ -91,27 +73,24 @@ nav ul li a.active {
 h1 {
   font-size: 2.8rem;
   color: #f8f8f8;
-  margin-bottom: 20px;
+  margin-bottom: 20px;/* Ensure space between h1 and nav */
 }
 
 /* Banner Style */
 .banner {
   position: relative;
-  height: 400px; 
-  width: 100%; 
-  background-color: #333; 
+  height: 400px; /* Fixed height for the banner */
+  width: 100%; /* Full-width banner */
+  background-color: #333; /* Fallback color in case the image doesn't load */
   overflow: hidden;
-  margin-bottom: 0;
+  margin-bottom: 40px;
 }
 
 .banner img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  opacity: 100; 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
+  width: 100%; /* Scale to fit the full width */
+  height: 100%; /* Scale to fit the height */
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+  opacity: 0.7; /* Add transparency */
 }
 
 .banner-overlay {
@@ -120,20 +99,13 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-  z-index: 1; 
 }
+
 
 /* Character Info Section */
 .character-info {
-  padding: 60px 20px;
-  background-color: transparent; 
-  color: #333;
-  margin-top: -50px; 
-  position: relative;
-  z-index: 2; 
-  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #1a1a1a 50%);
-  margin-bottom: -120px;
+  padding: 40px;
+  margin-bottom: -160px;
 }
 
 .character-details {
@@ -169,7 +141,7 @@ h1 {
 .character-bio .cardboard:hover {
   background: #d0d0d0;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3), 0px -10px 30px rgba(255, 255, 255, 0.3); /* Softer shadow */
-  transform: scale(1.1); 
+  transform: scale(1.1); /* Scale up */
 }
 
 
@@ -183,7 +155,7 @@ h1 {
   font-size: 1.1rem;
   line-height: 1.8;
   text-align: justify;
-  color: #000000; 
+  color: #000000; /* Matches the cardboard theme */
 }
 
 /* Power and Abilities Section */
@@ -202,21 +174,20 @@ h1 {
 }
 /* Container for the abilities */
 .accordion {
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  gap: 20px; 
-  padding: 20px; 
+  display: flex; /* Arrange the cards horizontally */
+  flex-wrap: wrap; /* Allow cards to wrap to the next row if necessary */
+  justify-content: space-between; /* Space between the cards */
+  gap: 20px; /* Add consistent spacing between cards */
+  padding: 20px; /* Optional: add padding around the entire container */
 }
 /* Cardboard Style for Abilities */
 .accordion .ability {
-  background: linear-gradient(to bottom right, #383838, #30224b);
-  color: #f8f8ff;
-  box-shadow: 4px 4px 10px rgba(100, 50, 200, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.2);
+  background: #757575;  /* Light cardboard background */
   padding: 60px;
   margin-bottom: 15px;
-  border-radius: 8px;  
-  width: 300px;  
+  border-radius: 8px;  /* Slightly rounded corners */
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1), -4px -4px 6px rgba(255, 255, 255, 0.3);  /* Shadow to mimic cardboard */
+  width: 300px;  /* Make the cards square (width = height) */
   height: 300px;
   position: relative;
   overflow: hidden;
@@ -234,8 +205,9 @@ h1 {
 /* Ability Title */
 .accordion .ability-title {
   font-size: 1.8rem;
+  font-weight: bold;
   margin-bottom: 10px;
-  color: #ffffff;  
+  color: #000000;  /* Dark text for the title */
 }
 
 /* Ability Description (Hidden until hover) */
@@ -249,10 +221,10 @@ h1 {
   top: 0;
   padding: 15px;
   color: #444;
-  background: rgba(0, 0, 0, 0.7); 
+  background: rgba(0, 0, 0, 0.7);  /* Semi-transparent background for the detailed description */
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
-  padding-top: 80px;
+  padding-top: 80px; /* To avoid title overlapping */
 }
 
 /* On Hover: Show and Expand the Description */
@@ -260,7 +232,7 @@ h1 {
   opacity: 1;
   visibility: visible;
   padding-top: 20px;
-  transform: scale(1); 
+  transform: scale(1); /* Keep the same size but reveal details */
 }
 
 .accordion .ability-details p {
@@ -282,27 +254,14 @@ h1 {
   font-size: 1rem;
 }
 
-/* Styling the Image (always visible) */
+/* Styling the Image */
 .accordion .ability img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   margin-bottom: 15px;
   display: block;
   margin: 0 auto;
-  position: relative; 
-  z-index: 1; 
-  transition: transform 0.3s ease-in-out; 
-}
-
-/* Add a hover effect for the image */
-.accordion .ability:hover img {
-  transform: scale(1.1); 
-}
-
-/* Ensure Ability Details overlay doesn't hide the image */
-.accordion .ability-details {
-  z-index: 2; 
 }
 
 .accordion .ability-title {
@@ -311,39 +270,32 @@ h1 {
   justify-content: center;
 }
 
-#pa_center {
-    text-align: center;
-    max-width: 700px;
-    margin-left: 160px;
-    font-size: 1.4rem;
-}
-
 /* Footer Base Styling */
 footer ss{
-    background-color: #222; 
-    color: #f8f8f8;
+    background-color: #222; /* Footer background */
+    color: #f8f8f8; /* Footer text color */
     padding: 20px;
-    text-align: center; 
+    text-align: center; /* Centers all footer content */
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 20px; 
+    flex-direction: column; /* Stack carousel and links vertically */
+    align-items: center; /* Center align the content */
+    gap: 20px; /* Add spacing between carousel and links */
 }
 
 .brandsCarousel {
-    width: 300px; 
+    width: 300px; /* Centered carousel with limited width */
     height: 100px;
     overflow: hidden;
     position: relative;
-    background: transparent; 
+    background: transparent; /* Transparent background */
 }
 
 .carouselTrack {
-    display: flex;
-    width: calc(100px * 6); 
+    display: flex; /* Horizontal layout for the logos */
+    width: calc(100px * 6); /* Adjust width based on logo count */
     animation: infiniteLoop 10s linear infinite;
     will-change: transform;
 }
@@ -354,7 +306,6 @@ footer ss{
     object-fit: contain;
 }
 
-/* DELETED
 .social-links ul {
     list-style: none;
     padding: 0;
@@ -374,9 +325,8 @@ footer ss{
 }
 
 .social-links ul li a:hover {
-    color: #003bff;  Highlight link on hover 
+    color: #003bff; /* Highlight link on hover */
 }
-*/
 
 footer p {
     margin-top: 10px;
@@ -403,8 +353,8 @@ footer p {
 
 /* Add this to your CSS file (styles.css) */
 @font-face {
-  font-family: 'Perpetua'; 
-  src: url('perpetua.ttf') format('truetype'); 
+  font-family: 'Perpetua'; /* Custom name for the font */
+  src: url('perpetua.ttf') format('truetype'); /* Adjust the file path and format */
 }
 
 :root {
@@ -433,13 +383,14 @@ footer p {
 .brandsCarousel::before,
 .brandsCarousel::after {
     content: "";
-    width: 50px; 
+    width: 50px; /* Adjusted for a smaller carousel */
     height: 100px;
     position: absolute;
     top: 0;
     z-index: 2;
     pointer-events: none;
     background: linear-gradient(to right, rgba(250, 250, 240, 1) 0%, rgba(250, 250, 240, 0) 100%);
+    /* If you don't want the fade-in effect, make it transparent too */
     background: transparent;
 }
 
@@ -508,9 +459,9 @@ footer p {
 
 .lore-section {
   width: 100%;
-  max-width: 800px; 
-  margin: 0 auto; 
-  padding: 20px; 
+  max-width: 800px; /* Ensure parent has enough space */
+  margin: 0 auto; /* Center the section */
+  padding: 20px; /* Optional padding for better appearance */
 }
 
 .general-lore {
@@ -532,93 +483,99 @@ footer p {
 #mons_heading { 
   text-align: center;
 }
+#misc_heading {
+    text-align: center
+}
+#gp_heading{
+    text-align: center
+}
 
 .lore-section .general-lore #first {
   color: #fff;
   font-size: 1.3rem;
-  max-width: 800px; 
-  width: 100%; 
-  display: block; 
-  margin: 0 auto;
-  line-height: 1.5; 
-  box-sizing: border-box; 
+  max-width: 800px; /* Restrict max width */
+  width: 100%; /* Allow width to adjust */
+  display: block; /* Ensure block behavior */
+  margin: 0 auto; /* Center the paragraph */
+  line-height: 1.5; /* Improve readability */
+  box-sizing: border-box; /* Ensure padding/border included in max-width */
   margin-bottom: 30px;
 }
 
 /* Ensure the .mons-content takes up full width */
 .mons-content {
-  display: flex; 
-  gap: 20px; 
-  align-items: center; 
-  margin-top: 40px; 
-  max-width: 1200px; 
-  margin: 0 auto; 
-  flex-wrap: wrap; 
+  display: flex; /* Align content side by side */
+  gap: 20px; /* Add space between the text and image */
+  align-items: center; /* Vertically align the items */
+  margin-top: 40px; /* Optional: Add some spacing above */
+  max-width: 1200px; /* Adjust max-width to your desired limit */
+  margin: 0 auto; /* Center the content */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Text Section */
 .mons-content .text {
-  flex: 2; 
+  flex: 2; /* Give the text section more space */
   font-size: 1.2rem;
   line-height: 1.5;
   color: #fff;
-  max-width: 800px; 
+  max-width: 800px; /* Restrict the width of the text */
 }
 
 /* Image Section */
 .mons-content .image {
-  flex: 1; 
-  max-width: 450px; 
+  flex: 1; /* Image takes up 1 part of space */
+  max-width: 450px; /* Optional: Restrict max width of image */
 }
 
 .mons-content img {
-  width: 100%;
-  height: auto; 
-  border-radius: 8px; 
+  width: 100%; /* Make image responsive */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
 }
 
 /* Divider Image Style */
 #divider {
-  width: 40%; 
+  width: 40%; /* Stretch divider to full width */
   height: auto;
-  margin: 0 auto; 
+  margin: 0 auto; /* Margin to separate it from other content */
   display: block;
 }
 
 /* Adjusting the #bee title */
 #mons_heading {
-  font-size: 3rem; 
+  font-size: 3rem; /* Slightly smaller than the main title */
   color: #fff;
-  margin-top: 40px; 
-  text-align: center; 
+  margin-top: 40px; /* Optional: Margin for spacing */
+  text-align: center; /* Optional: Center title */
   margin-top: -90px;
 }
 
 /* Optional: Adjusting paragraph spacing */
 #first, #second {
-  margin-bottom: 20px; 
-  color: #fff; 
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+  color: #fff; /* Ensure text color is white */
   font-size: 1.3rem;
   line-height: 1.6;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px; 
+  max-width: 1000px; /* Restrict the container's max width */
   position: relative;
   margin: auto;
-  border: 3px solid #fff; 
-  border-radius: 10px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-  background-color: #121212; 
+  border: 3px solid #fff; /* White border for the container */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure no content goes outside the container */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  background-color: #121212; /* Darker black for better contrast */
   margin-bottom: 100px;
 }
 
 /* Slide styling - Hide slides by default */
 .mySlides {
   display: none;
-  animation: fadeEffect 1.5s ease-in-out; 
+  animation: fadeEffect 1.5s ease-in-out; /* Smooth fade animation for transitions */
 }
 
 /* Animation for fading effect */
@@ -635,8 +592,8 @@ footer p {
 .slide-image {
   width: 100%;
   height: auto;
-  border-radius: 8px; 
-  object-fit: cover; 
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Ensures the image scales without distortion */
 }
 
 /* Navigation buttons */
@@ -648,12 +605,12 @@ footer p {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly more opaque buttons */
   border: none;
-  border-radius: 50%; 
+  border-radius: 50%; /* Circular buttons for a modern look */
   user-select: none;
   transform: translateY(-50%);
-  transition: background-color 0.3s ease, transform 0.2s ease; 
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
 
 .prev {
@@ -668,7 +625,7 @@ footer p {
 .prev:hover, .next:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: #000;
-  transform: translateY(-50%) scale(1.1); 
+  transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Caption text */
@@ -680,10 +637,10 @@ footer p {
   color: white;
   font-size: 18px;
   padding: 10px 15px;
-  background-color: rgba(0, 0, 0, 0.7); 
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
   border-radius: 5px;
   text-align: center;
-  max-width: 90%; 
+  max-width: 90%; /* Ensures the caption doesn't overflow the container */
   line-height: 1.4;
 }
 
@@ -706,135 +663,42 @@ footer p {
 }
 
 .dot:hover, .dot.active {
-  background-color: #ffcc00; 
-  transform: scale(1.2); 
+  background-color: #ffcc00; /* Highlight color for active or hovered dots */
+  transform: scale(1.2); /* Slightly enlarge the dot */
 }
-
-/* Community Section */
-.community-container {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: transparent;
-}
-
-.community-container h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.community-container p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* Community Links (container for all the links) */
-.community-links {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.community-link {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  background-color: #454545;
+.content-box {
+  max-width: 400px;
+  margin: 20px auto;
   padding: 20px;
-  width: 150px;
+  border: 2px solid #fff; /* Green border */
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #4c4c4c; /* Light gray background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.community-link img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 0px;
+.content-box h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #fff; /* Dark text */
+  text-align: center;
 }
 
-.community-link span {
-  display: block;
-  font-size: 1rem;
+.content-box ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0;
+}
+
+.content-box li {
+  margin: 10px 0;
+}
+
+.content-box a {
+  text-decoration: none; /* Removes underline */
+  color: #fff; /* Green text */
   font-weight: bold;
-}
+  transition
 
-/* Hover Effects for Links */
-.community-link:hover {
-  background-color: #166193; 
-  color: #fff; 
-  transform: scale(1.3); 
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); 
-}
-/* Responsive Styles for Smaller Screens */
-@media (max-width: 768px) {
-  .community-links {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .community-link {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
 
-/* Fake Download Links Section */
-.fake-download-links {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-/* Keeping your original cardboard style for download links */
-.download-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Cardboard Style */
-.cardboard_download {
-  background:  #333;
-  padding: 20px;
-  border-radius: 15px;
-  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
-  width: 200px; /* Consistent width */
-  height: 130px; /* Consistent height */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
-}
-
-/* Title for Cardboard */
-.cardboard_download p {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-/* Hover Effect (same as original) */
-.cardboard_download:hover {
-  background: #4b4a4a;
-  transform: scale(1.05);
-}
-
-.cardboard_download img {
-  height: 100px; 
-  width: 100px; 
-  margin-bottom: 0px;
-}
-
-.download-link-text {
-  text-align: center;
-  margin: 10px;
-}
 
 

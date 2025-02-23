@@ -12,19 +12,28 @@
     <div class="logo">
       <img src="./assets/hollow_knight_logo.png" alt="Hollow Knight Wiki">
     </div>
-    <h1> Hollow Knight Fan Wiki </h1>
+    <h1 class="heading_text"> Hollow Knight Fan Wiki </h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="main.html">Home</a></li>
         <li><a href="lore.html">Lore</a></li>
-        <li><a href="#">Maps</a></li>
-        <li><a href="comm.html">Community</a></li>
+        <li><a href="map.html">Maps</a></li>
+        <li><a href="#">Community</a></li>
       </ul>
     </nav>
   </header>
 
  <main class="lore-page">
   <h1 id="lore-heading">Lore</h1>
+     <div class="content-box">
+  <h1 id="C-heading">Contents</h1>
+  <ul>
+    <li><a href="#gp_heading">Groups</a></li>
+    <li><a href="#misc_heading">Misc</a></li>
+    <li><a href="#">Community</a></li>
+  </ul>
+</div>
+
   <section class="lore-section">
     <div class="general-lore">
       <p>
@@ -35,9 +44,49 @@
         As long as all sources have been exhausted and taken into account, a player should,
         in their own right, have a general understanding of any lore topic.
       </p>
+            <img src="assets/lore1.png" alt="_" id="divider"><br>
+
     </div>
+                <img src="assets/Hr.png" alt="_" id="divider"><br>
+                <h1 id="gp_heading"> Groups </h1><br><br>
+
+
+          <img src="assets/dividerlong.png" alt="_" id="divider"><br><br><br>
+          <h1 id="mons_heading"> Mantis Tribe </h1>
+      <div class="general-lore mons-content">
+    <div class="text">
+      <p id="first">
+          The Mantis Tribe is a tribe of proud and ferocious bugs whose traditions date back to ancient times before the kingdom of Hallownest was founded.These naturally-born fighters built the Mantis Village deep within the Fungal Wastes.Led by the Mantis Lords, they defend their territories from intruders with their lives.Their flying youths are compelled to prove their strength before becoming warriors.However, they all come to respect any who would defeat their leaders in honourable combat, and give them the freedom to enter their territory. </p>
+      <p id="second"> 
+        Being opposed to the Kingdom of Hallownest,the Mantises negotiated a truce with them to retain sovereignty in their domain.In exchange, they agreed to keep the beasts of Deepnest, which borders Mantis Village, at bay.At some point, Elder Hu believed the Infection spread to their village and tried to purify it.He was killed by the Mantises after attacking them, not realizing his own madness driven by the Infection.
+      </p>
+    </div>
+    <div class="image">
+      <img src="./assets/mantis.png" alt="Bees of Hallownest">
+    </div>
+  </div>
+      <!-- Slideshow container for Mantis -->
+<div class="slideshow-container" id="mantis-slider">
+    
+  <!-- Full-width images -->
+  <div class="mySlides fade">
+    <img src="./assets/mantis1.png" alt="Mantis 1" class="slide-image">
+  </div>
+  <div class="mySlides fade">
+    <img src="./assets/mantis2.png" alt="Mantis 2" class="slide-image">
+  </div>
+  <div class="mySlides fade">
+    <img src="./assets/mantis3.png" alt="Mantis 3" class="slide-image">
+  </div>
+
+  <!-- Navigation buttons -->
+  <a class="prev" onclick="plusSlides(-1, 'bees')">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 'bees')">&#10095;</a>
+</div>
+
+
       
-    <img src="assets/divider.png" alt="_" id="divider">
+    <img src="assets/dividerlong.png" alt="_" id="divider"><br><br><br> 
    
    <h1 id="mons_heading"> Bees </h1>
    <div class="general-lore mons-content">
@@ -70,7 +119,8 @@
   <a class="prev" onclick="plusSlides(-1, 'bees')">&#10094;</a>
   <a class="next" onclick="plusSlides(1, 'bees')">&#10095;</a>
 </div>
-     
+         <img src="assets/dividerlong.png" alt="_" id="divider"><br><br><br>
+      
   <h1 id="mons_heading"> Flukes </h1>
    <div class="general-lore mons-content">
     <div class="text">
@@ -103,28 +153,110 @@
   <!-- Navigation buttons -->
   <a class="prev" onclick="plusSlides(-1, 'flukes')">&#10094;</a>
   <a class="next" onclick="plusSlides(1, 'flukes')">&#10095;</a>
-</div>   
+</div>
+      
+    <img src="assets/Hr.png" alt="_" id="divider"><br><br><br>
+         <h1 id="misc_heading"> Miscellaneous Groups </h1><br><br>
+               <img src="assets/dividerlong.png" alt="_" id="divider"><br>
+               <h1 id="misc_heading"> Ancient Civilisation </h1>
+      <div class="general-lore mons-content">
+    <div class="text">
+      <p id="first">
+        The ancient civilisation was a civilisation of bugs that existed in the distant past before the Kingdom of Hallownest was founded.It originated from or near the Abyss but later expanded to the entire land of Hallownest. This civilisation did not devote its worship to any lord or power but instead worshipped the Void itself. </p>
+      <p id="second"> 
+        Soul Totems are remnants of the ancient civilisation. These Totems are present in all areas of Hallownest and depict several unknown bugs or creatures. Soul Totems contain Soul, the substance that animates bugs' bodies, which can be used to cast Spells or to Focus. It is unclear what kind of power the ancient civilisation had over Soul.
+
+Several Soul Totems can be found in Deepnest in the Sharp Shadow area. These Soul Totems have Void tendrils attached to them which appears to have corrupted them, forming the Sharp Shadow Charm. This Charm contains a forbidden Spell that transforms shadows into deadly weapons and bears a resemblance to the shape of one of the Soul Totems.
+      </p>
+    </div>
+    <div class="image">
+      <img src="./assets/totem.png" alt="Bees of Hallownest">
+    </div>
+  </div>
+      <div class="slideshow-container" id="flukes-slider">
+  <!-- Full-width images -->
+  <div class="mySlides fade">
+    <img src="./assets/ac1.png" alt="AC 1" class="slide-image">
+  </div>
+  <div class="mySlides fade">
+    <img src="./assets/ac2.png" alt="AC 2" class="slide-image">
+  </div>
+  <div class="mySlides fade">
+    <img src="./assets/ac3.png" alt="AC 3" class="slide-image">
+  </div>
+
+  <!-- Navigation buttons -->
+  <a class="prev" onclick="plusSlides(-1, 'flukes')">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 'flukes')">&#10095;</a>
+</div>
+          <img src="assets/dividerlong.png" alt="_" id="divider"><br><br><br> 
+         <h1 id="mons_heading"> Dreamers </h1>
+      <img src="assets/d.png" id="divider">
+
+      <div class="general-lore mons-content">
+    <div class="text">
+      <p id="first">
+          The Dreamers are three beings who entered into an eternal sleep in order to use their power to seal away the Hollow Knight.The ones who became the Dreamers are Monomon the Teacher, Lurien the Watcher, and Herrah the Beast. Their seals are present on the exterior of the Black Egg located in the Temple of the Black Egg. </p>
+      <p id="second"> 
+        The Knight encounters two projections of the Dreamers. The first time is in Greenpath after picking up the Mothwing Cloak. The second time is in the Resting Grounds after inspecting the Dreamers memorial. Both times the Dreamers tell the Knight to stop trying to break their Seals. In the Resting Grounds, the Dreamers attempt to prevent the Knight from finding their resting bodies by trapping the Knight in the Dream Realm.
+
+After finding a Dreamer's physical body, using the Dream Nail on their body sends the Knight into a Dream that contains a vulnerable form of that Dreamer. Killing this form and absorbing it using Focus breaks their respective Seal.
+      </p>
+    </div>
+    <div class="image">
+      <img src="./assets/Dreamers_group.png" alt="Bees of Hallownest">
+    </div>
+  </div>  
+      <div class="slideshow-container" id="flukes-slider">
+  <!-- Full-width images -->
+  <div class="mySlides fade">
+    <img src="./assets/dr1.png" alt="AC 1" class="slide-image">
+  </div>
+  <div class="mySlides fade">
+    <img src="./assets/dr2.png" alt="AC 2" class="slide-image">
+  </div>
+  <div class="mySlides fade">
+    <img src="./assets/dr3.png" alt="AC 3" class="slide-image">
+  </div>
+
+  <!-- Navigation buttons -->
+  <a class="prev" onclick="plusSlides(-1, 'flukes')">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 'flukes')">&#10095;</a>
+</div>
+
+      
+
+
+
+      
 
 </section>
 </main>
 
   <script src="script.js"></script>
   <!-- Footer Section -->
- <footer>
+  <footer>
     <div class="footer-content">
         <div class="brandsCarousel">
             <div class="carouselTrack">
-                <div class="brandLogo"><img src="./assets/sl_1.png" alt=""></div>
-                <div class="brandLogo"><img src="./assets/sl_2.png" alt=""></div>
-                <div class="brandLogo"><img src="./assets/sl_3.png" alt=""></div>
-                <!-- Repeat logos for infinite effect -->
-                <div class="brandLogo"><img src="./assets/sl_1.png" alt=""></div>
-                <div class="brandLogo"><img src="./assets/sl_2.png" alt=""></div>
-                <div class="brandLogo"><img src="./assets/sl_3.png" alt=""></div>
+                <div class="brandLogo"><img src="./assets/facebook_2.png" alt="Facebook"></div>
+                <div class="brandLogo"><img src="./assets/reddit_2.png" alt="Reddit"></div>
+                <div class="brandLogo"><img src="./assets/youtube_2.png" alt="YouTube"></div>
+                <div class="brandLogo"><img src="./assets/facebook_2.png" alt="Facebook"></div>
+                <div class="brandLogo"><img src="./assets/reddit_2.png" alt="Reddit"></div>
+                <div class="brandLogo"><img src="./assets/youtube_2.png" alt="YouTube"></div>
             </div>
+        </div>
+        <div class="social-links">
+            <ul>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://reddit.com" target="_blank" rel="noopener noreferrer">Reddit</a></li>
+                <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
         </div>
     </div>
     <p>&copy; 2025 Hollow Knight Wiki</p>
-</footer>
+  </footer>
+    
 </body>
 </html>
