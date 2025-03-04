@@ -837,4 +837,23 @@ footer p {
   margin: 10px;
 }
 
+/* Merged Code */
 
+.content-box {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #fff; /* Green border */
+  border-radius: 10px;
+  background-color: #4c4c4c; /* Light gray background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.content-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-box li {
+  margin: 10px 0;
+}
