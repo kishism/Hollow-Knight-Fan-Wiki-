@@ -696,28 +696,63 @@ footer p {
   text-decoration: none; /* Removes underline */
   color: #fff; /* Green text */
   font-weight: bold;
-  transition
-
-
-
-
-/* Merged Code */
-
-.content-box {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid #fff; /* Green border */
-  border-radius: 10px;
-  background-color: #4c4c4c; /* Light gray background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.content-box ul {
-  list-style-type: none;
-  padding: 0;
+/* Centering the community section */
+.community-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.content-box li {
-  margin: 10px 0;
+/* Centering the community links */
+.community-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Centering the fake download links */
+.fake-download-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Ensuring the cardboard_download elements are centered */
+.cardboard_download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  background-color: #f4f4f4; /* Optional: Add a background */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+/* Footer centering */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Centering the brand carousel */
+.brandsCarousel {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselTrack {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
